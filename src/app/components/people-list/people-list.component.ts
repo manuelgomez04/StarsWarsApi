@@ -10,11 +10,11 @@ import { PeopleService } from '../../services/people.service';
 export class PeopleListComponent implements OnInit {
   listadoPersonas: People[] = [];
 
-  constructor(private PeopleService: PeopleService) { }
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
-    this.PeopleService.getPeopleList().subscribe(respuesta => {
-      this.listadoPersonas = respuesta.results;
+    this.peopleService.getPeopleList().subscribe((response) => {
+      this.listadoPersonas = response.results;
     });
   }
 

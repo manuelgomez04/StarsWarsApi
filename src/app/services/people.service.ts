@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { PeopleListResponse } from '../interfaces/people.interfaces';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +10,8 @@ export class PeopleService {
 
   constructor(private http: HttpClient) { }
 
-  getPeopleList() {
+  getPeopleList(): Observable<PeopleListResponse> {
 
-    return this.http.get<any>('https://swapi.dev/api/people');
+    return this.http.get<PeopleListResponse>('https://swapi.dev/api/people');
   }
 }

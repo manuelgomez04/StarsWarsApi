@@ -1,3 +1,11 @@
+
+export interface PeopleListResponse {
+    count: number
+    next: string
+    previous: any
+    results: People[]
+}
+
 export interface People {
     name: string
     height: string
