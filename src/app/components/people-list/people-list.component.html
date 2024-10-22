@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <div class="row">
+        @for(item of listadoPersonas; track item.url){
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card h-100">
+                <img [src]="createImg(item.url)" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">Gender: {{ item.gender }}<br /></p>
+                    <p class="card-text">Height: {{ item.height }}<br /></p>
+                    <p class="card-text">Birth year: {{ item.birth_year }}<br /></p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
